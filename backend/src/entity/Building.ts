@@ -1,4 +1,5 @@
-import {Entity, PrimaryGeneratedColumn, Column} from "typeorm";
+import {Entity, PrimaryGeneratedColumn, Column, OneToMany} from "typeorm";
+import { WaterFountain } from "./WaterFountain";
 
 @Entity()
 export class Building {
@@ -14,4 +15,7 @@ export class Building {
 
     @Column()
     latitude: number;
+
+    @OneToMany(() => WaterFountain, wf => wf.building)
+    waterFountains: WaterFountain;
 }

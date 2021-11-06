@@ -1,4 +1,4 @@
-import {Entity, PrimaryGeneratedColumn, Column, OneToOne, JoinColumn} from "typeorm";
+import {Entity, PrimaryGeneratedColumn, Column, OneToOne, JoinColumn, ManyToOne} from "typeorm";
 import { Building } from "./Building";
 
 @Entity()
@@ -12,12 +12,15 @@ export class WaterFountain {
     status: string;
 
     @Column()
+    lastUpdated: string;
+
+    @Column()
     longitude: number;
 
     @Column()
     latitude: number;
 
-    @OneToOne(() => Building)
+    @ManyToOne(() => Building, building => building.waterFountains)
     @JoinColumn()
     building: Building;
 
