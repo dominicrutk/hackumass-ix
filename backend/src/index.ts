@@ -7,6 +7,7 @@ import express from 'express';
 import bodyParser from "body-parser";
 
 import waterFountain from './routes/waterFountain';
+import building from './routes/building';
 
 const PORT = 8080;
 
@@ -54,6 +55,7 @@ createConnection().then(connection => {
 
     app.use(bodyParser.urlencoded({ extended: true }));
     app.use('/waterFountain', waterFountain);
+    app.use('/building', building);
     
 
     app.listen(PORT, () => {
