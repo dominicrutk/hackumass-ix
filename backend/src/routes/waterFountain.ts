@@ -34,6 +34,7 @@ router.post('/', async (req, res) => {
     wf.longitude = data.longitude;
     wf.latitude = data.latitude;
     wf.lastUpdated = Date.now() + "";
+    wf.note = data.note;
 
     const building = await buildingRepo.findOne({
         where: {

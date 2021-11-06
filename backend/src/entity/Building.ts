@@ -10,10 +10,10 @@ export class Building {
     @Column()
     name: string;
 
-    @Column()
+    @Column({ type: "float" })
     longitude: number;
 
-    @Column()
+    @Column({ type: "float" })
     latitude: number;
 
     @OneToMany(() => WaterFountain, wf => wf.building)

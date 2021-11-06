@@ -1,12 +1,16 @@
-import Card from 'react-bootstrap/Card';
-import Col from 'react-bootstrap/Col'
-import Row from 'react-bootstrap/Row'
+import {Card, Col, Container, Row} from 'react-bootstrap';
+
+const cards = [{
+
+}, {
+    
+}];
 
 function Text() {
     return (
-        <Row xs={1} md={2} className="g-4">
-            {Array.from({ length: 1 }).map((_, idx) => (           
-                <Col >
+        <Container fluid>
+            <Row>
+                <Col>
                     <Card
                       bg={'dark'}
                       text={'white'}
@@ -25,9 +29,7 @@ function Text() {
                     </Card.Body>
                     </Card>
                 </Col>
-            ))}
-            {Array.from({ length: 1 }).map((_, idx) => (
-                <Col >
+                <Col>
                     <Card
                       bg={'dark'}
                       text={'white'}
@@ -48,9 +50,7 @@ function Text() {
                     </Card.Body>
                     </Card>
                 </Col>
-            ))}
-            {Array.from({ length: 1 }).map((_, idx) => (
-                <Col >
+                <Col>
                     <Card
                       bg={'dark'}
                       text={'white'}
@@ -69,21 +69,19 @@ function Text() {
                     </Card.Body>
                     </Card>
                 </Col>
-            ))}
-            {Array.from({ length: 1 }).map((_, idx) => (
-                <Col >
+                <Col>
                     <Card
                       bg={'dark'}
                       text={'white'}
                     >
                     <Card.Header>Hardware visual</Card.Header>
                     <Card.Body>
-                        <img src=""></img>
+                        <img src="IMG_6640.jpg"></img>
                     </Card.Body>
                     </Card>
                 </Col>
-            ))}
-        </Row>
+            </Row>
+        </Container>
     );
 }
 

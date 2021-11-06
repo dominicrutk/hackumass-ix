@@ -3,7 +3,7 @@ import React from "react";
 export default function WaterFountainRow(props) {
   const building = props.building;
   const data = {
-    urgency: 1,
+    urgency: building.urgency,
     location: building.name,
     greens: 0,
     yellows: 0,

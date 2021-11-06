@@ -7,7 +7,7 @@ import Search from './Search.js';
 
 function App() {
   useEffect(() => {
-    document.title = 'Name TBD';
+    document.title = 'Internet of Utilities (IOU)';
   }, []);
   return (
     <div className="App">

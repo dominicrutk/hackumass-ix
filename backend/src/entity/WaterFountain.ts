@@ -14,17 +14,17 @@ export class WaterFountain {
     @Column()
     lastUpdated: string;
 
-    @Column()
+    @Column({ type: "float" })
     longitude: number;
 
-    @Column()
+    @Column({ type: "float" })
     latitude: number;
 
     @ManyToOne(() => Building, building => building.waterFountains)
     @JoinColumn()
     building: Building;
 
-    @Column()
+    @Column({ nullable: true })
     note: string;
 
 }
