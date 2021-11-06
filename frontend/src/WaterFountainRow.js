@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from "react";
 
 export default function WaterFountainRow(props) {
@@ -24,11 +23,4 @@ export default function WaterFountainRow(props) {
     <td>{data.yellows}</td>
     <td>{data.reds}</td>
   </tr>
-=======
-import react from 'react';
-
-
-export default function WaterFountainRow() {
-
->>>>>>> 2221c587082bb3568029c6b55f2f90e4102b5fd9
 }

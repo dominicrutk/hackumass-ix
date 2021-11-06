@@ -24,4 +24,7 @@ export class WaterFountain {
     @JoinColumn()
     building: Building;
 
+    @Column()
+    note: string;
+
 }

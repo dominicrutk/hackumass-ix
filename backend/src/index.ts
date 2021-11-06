@@ -5,6 +5,7 @@ import { WaterFountain } from "./entity/WaterFountain";
 
 import express from 'express';
 import bodyParser from "body-parser";
+import cors from 'cors';
 
 import waterFountain from './routes/waterFountain';
 import building from './routes/building';
@@ -54,6 +55,7 @@ createConnection().then(connection => {
     });
 
     app.use(bodyParser.urlencoded({ extended: true }));
+    app.use(cors());
     app.use('/waterFountain', waterFountain);
     app.use('/building', building);
     
