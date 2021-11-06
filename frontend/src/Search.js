@@ -1,4 +1,3 @@
-import './Search.css'
 import Table from 'react-bootstrap/Table';
 import WaterFountainRow from './WaterFountainRow';
 import { useEffect, useState } from 'react';
