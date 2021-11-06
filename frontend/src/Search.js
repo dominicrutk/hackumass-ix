@@ -1,7 +1,34 @@
 import './Search.css'
 import Table from 'react-bootstrap/Table';
+import WaterFountainRow from './WaterFountainRow';
+import { useEffect, useState } from 'react';
 
 function Search() {
+
+    // let buildings = [];
+    const [buildings, setBuildings] = useState([]);
+
+    useEffect(() => {
+        fetch('http://localhost:8080/building')
+            .then(response => response.json())
+            .then(data => {
+                setBuildings(data)
+                console.log(buildings);
+            })
+            .catch(console.err);
+    }, []);
+
+
+    const t = {
+        urgency: 1,
+        location: "ILC",
+        greens: 1,
+        yellows: 2,
+        reds: 3
+    }
+
+    console.log('rendered the search component');
+
     return ( 
         <Table striped bordered hover variant="dark">
             <thead>
@@ -14,46 +41,7 @@ function Search() {
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                </tr>
-                <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                </tr>
-                <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                </tr>
-                <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                </tr><tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                </tr><tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                </tr>
+                {buildings.map(bd => <WaterFountainRow building={bd} key={bd.id}/>)}
             </tbody>
         </Table>
     );
