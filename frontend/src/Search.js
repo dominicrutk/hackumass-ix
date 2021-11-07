@@ -1,14 +1,17 @@
 import Table from 'react-bootstrap/Table';
 import WaterFountainRow from './WaterFountainRow';
 import { useEffect, useState } from 'react';
+import { getApiUrl } from './api';
 
 function Search() {
 
     // let buildings = [];
     const [buildings, setBuildings] = useState([]);
 
+    console.log(process.env);
+
     useEffect(() => {
-        fetch('http://localhost:8080/building')
+        fetch(`${getApiUrl()}/building`)
             .then(response => response.json())
             .then(data => {
                 sortBuildingsByUrgency(data);

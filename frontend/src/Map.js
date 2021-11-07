@@ -1,6 +1,7 @@
 import { MapContainer, TileLayer, CircleMarker, Popup } from 'react-leaflet';
 import './Map.css';
 import { useEffect, useState } from 'react';
+import { getApiUrl } from './api';
 
 const lat = 42.390208;
 const long = -72.528271;
@@ -9,46 +10,26 @@ const center = [lat, long];
 const markerOptions = {
     GREEN: {
         fillColor: 'green',
-        fillOpacity: 0.55,
+        fillOpacity: 0.6,
         stroke: false
     },
     YELLOW: {
         fillColor: 'yellow',
-        fillOpacity: 0.55,
+        fillOpacity: 0.6,
         stroke: false
     },
     RED: {
         fillColor: 'red',
-        fillOpacity: 0.55,
+        fillOpacity: 0.6,
         stroke: false
     }
 }
-
-// Test data, should probably be kept as a property
-let markers = [
-    {
-        lat: 42.388482,
-        long: -72.530341,
-        color: 'green',
-        text: 'Sycamore'
-    }, {
-        lat: 42.390208,
-        long: -72.528271,
-        color: 'yellow',
-        text: 'Library'
-    }, {
-        lat: 42.390929,
-        long: -72.525870,
-        color: 'red',
-        text: 'ILC'
-    }
-];
 
 function Map() {
     const [buildings, setBuildings] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:8080/building')
+        fetch(`${getApiUrl()}/building`)
             .then(response => response.json())
             .then(data => {
                 setBuildings(data)
@@ -83,7 +64,7 @@ function Map() {
             building.status = "GREEN";
         }
 
-        building.radius = Math.min(5 * building.statuses.total, 50);
+        building.radius = Math.min(Math.max(5 * building.statuses.total, 10), 50);
     });
 
     return (

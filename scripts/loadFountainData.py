@@ -25,6 +25,8 @@ def postBuilding(building):
 
 def postWaterFountain(building, location, latitude, longitude):
   n = random.randint(0, 2)
+  if building.name == 'Franklin DC':
+    n = 2
   s = "GREEN"
   if n == 1:
     s = "YELLOW"
@@ -41,7 +43,7 @@ def postWaterFountain(building, location, latitude, longitude):
   print(r.text)
   
 
-with open('fountainData.csv') as f:
+with open('data.csv') as f:
   reader = csv.reader(f)
 
   # rows = []
