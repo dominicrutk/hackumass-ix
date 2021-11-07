@@ -15,7 +15,9 @@ function App() {
       <Map />
       <Search />
       <Text />
+      <div class='w3-bar-item'>Established November 5, 2021 @ HackUMass</div>
     </div>
+
   );
 }
 

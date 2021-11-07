@@ -73,7 +73,7 @@ function Search() {
                 </tr>
             </thead>
             <tbody>
-                {buildings.map(bd => <WaterFountainRow building={bd} key={bd.id} />)}
+                {buildings.map((bd, index) => <WaterFountainRow building={bd} key={bd.id} index={index} />)}
             </tbody>
         </Table>
     );

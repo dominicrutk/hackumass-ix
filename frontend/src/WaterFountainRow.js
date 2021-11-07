@@ -17,7 +17,7 @@ export default function WaterFountainRow(props) {
   });
   
   return <tr>
-    <td>{data.urgency}</td> 
+    <td>{props.index + 1}</td> 
     <td>{data.location}</td>
     <td>{data.greens}</td>
     <td>{data.yellows}</td>
