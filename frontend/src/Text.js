@@ -79,7 +79,7 @@ function Text() {
                           bg={'dark'}
                       text={'white'}
                        >
-                     <Card.Header>Raspberry Pi Setup</Card.Header>
+                     <Card.Header>Hardware images</Card.Header>
                      <Card.Body>
                             <img width = '100%' height = '100%' src="ImageOfFountain.jpg"></img>
                      </Card.Body>
@@ -90,7 +90,7 @@ function Text() {
                       bg={'dark'}
                       text={'white'}
                     >
-                    <Card.Header>____</Card.Header>
+                    <Card.Header>Hardware images</Card.Header>
                     <Card.Body>
                         <Card.Text>
                             <img width = '100%' height = '100%' src=""></img>
@@ -103,7 +103,7 @@ function Text() {
                       bg={'dark'}
                       text={'white'}
                     >
-                    <Card.Header>____</Card.Header>
+                    <Card.Header>Hardware images</Card.Header>
                     <Card.Body>
                         <img width = '100%' height = '100%' src=""></img>
                     </Card.Body>
