@@ -59,13 +59,14 @@ function Text() {
                     bg={'dark'}
                     text={'white'}
                     >
-                        <Card.Header>Methods</Card.Header>
+                        <Card.Header>How it's built</Card.Header>
                         <Card.Body>
                             <Card.Text>
-                                This project uses a raspberry a raspberry pi NoIR camera that is connected to a 3D-printed mount for the filter.
-                                This sensor continuously checks the status and updates a backend SQL database that feeds into the react frontend 
-                                user interface. The urgency is calculated using the proportion of red filters in each location and is also displayed
-                                in the frontend.
+                                Each device is made up of a Raspberry Pi, a camera, and a 3D-printed mount. The camera uses OpenCV to check the color 
+                                of the filter status light to determine whether the filter needs replacing. The information from each device is posted
+                                 to a backend running on an AWS E2 instance using an Express.js server with MySQL. The app’s frontend is made with React,
+                                  and it uses a JavaScript library called Leaflet to display the information on the map. 
+
                             </Card.Text>
                             <img width = '100%' height = '100%' src="img3.jpg"></img>
                         </Card.Body>

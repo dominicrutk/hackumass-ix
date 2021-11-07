@@ -11,7 +11,7 @@ function NavBar() {
           <Nav className="me-auto">
             <Nav.Link href="https://hackumass.com/" target="_ ">HackUmass</Nav.Link>
             <Nav.Link href="https://github.com/dominicrutk/hackumass-ix" target="_ ">GitHub</Nav.Link>
-            <Nav.Link href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_ ">Documentation</Nav.Link>
+            <Nav.Link href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_ ">Source Code</Nav.Link>
             <Nav.Link href="https://mlh.io/" target="_ ">Major League Hacking</Nav.Link>
           </Nav>
         </Navbar.Collapse>
